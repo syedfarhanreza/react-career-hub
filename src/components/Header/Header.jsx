@@ -5,7 +5,6 @@ const Header = () => {
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to='/jobs'>Jobs</NavLink></li>
         <li><NavLink to="/applied">Applied Jobs </NavLink></li>
         <li><NavLink to="/statistics">Statistics </NavLink></li>
         <li><NavLink to="/blogs">Blogs </NavLink></li>
@@ -25,7 +24,7 @@ const Header = () => {
                 <Link to='/' className="btn btn-ghost text-4xl font-bold">Career Hub</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 text-purple-500">
                     {links}
                 </ul>
             </div>

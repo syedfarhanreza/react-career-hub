@@ -4,6 +4,9 @@ import { SlCalender } from "react-icons/sl";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { useLoaderData, useParams } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from '../../utility/localstorage';
 
 const JobDetails = () => {
 
@@ -12,6 +15,11 @@ const JobDetails = () => {
     const idInt = parseInt(id);
     const job = jobs.find(job => job.id === idInt);
     const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, contact_information } = job;
+
+    const handleApplyJob = () => {
+        saveJobApplication(idInt);
+        toast('You have applied successfully');
+    }
 
 
     return (
@@ -63,10 +71,10 @@ const JobDetails = () => {
                         <p className='font-bold mr-1'>Address:</p>
                         <p>{contact_information.address}</p>
                     </div>
-                    <button className=" w-full btn  hover:from-pink-500 hover:to-blue-500 bg-gradient-to-r from-indigo-500 to-purple-500 text-white ">Apply Now</button>
+                    <button onClick={handleApplyJob} className=" w-full btn  hover:from-pink-500 hover:to-blue-500 bg-gradient-to-r from-indigo-500 to-purple-500 text-white ">Apply Now</button>
                 </div>
-
             </div>
+            <ToastContainer />
         </div>
     );
 };

@@ -23,10 +23,12 @@ const FeaturedJobs = () => {
                     jobs.slice(0, dataLength).map(job => <Job key={job.id} job={job}></Job>)
                 }
             </div>
-            <div className={dataLength === jobs.length && 'hidden'}>
-                <button
-                    onClick={() => setDataLength(jobs.length)}
-                    className="btn  hover:from-pink-500 hover:to-blue-500 bg-gradient-to-r from-indigo-500 to-purple-500 text-white mt-5">Show All jobs</button>
+            <div className='flex justify-center'>
+                <div className={dataLength === jobs.length && 'hidden'}>
+                    <button
+                        onClick={() => setDataLength(jobs.length)}
+                        className="btn  hover:from-pink-500 hover:to-blue-500 bg-gradient-to-r from-indigo-500 to-purple-500 text-white mt-5">Show All jobs</button>
+                </div>
             </div>
         </div>
     );
