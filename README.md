@@ -1,6 +1,6 @@
 # Career Hub
 
-This is a frontend project using react js, react-router, tailwindCss, and daisy UI.
+This is a frontend project using react js, react-router, tailwindCSS, and daisy UI.
 
 ## Developed By Syed Farhan Reza.
 
