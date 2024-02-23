@@ -1,4 +1,4 @@
-![Career-hub home](https://github.com/syedfarhanreza/react-career-hub/assets/95230278/ae76ca19-2274-4845-835b-e29d940e1ee6)# Career Hub
+# Career Hub
 
 This is a frontend project using react js, react-router, tailwindCss, and daisy UI.
 
